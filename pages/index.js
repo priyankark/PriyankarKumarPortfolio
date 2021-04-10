@@ -2,6 +2,7 @@ import Head from 'next/head';
 import { Header } from '../components/Header';
 import { TimeLine } from '../components/TimeLine';
 import { AboutMe } from '../components/AboutMe';
+import {SkillsMap} from '../components/SkillsMap';
 
 export default function Home() {
   return (
@@ -16,10 +17,11 @@ export default function Home() {
           <div className="w-3/6">
             <TimeLine />
           </div>
-          <div className="w-3/6">
+          <div className="w-3/6 ml-2">
             <AboutMe />
           </div>
         </div>
+        <SkillsMap/>
       </main>
     </div>
   )
