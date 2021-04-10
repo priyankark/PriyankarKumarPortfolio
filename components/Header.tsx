@@ -9,6 +9,9 @@ export const Header = () => {
             <div className="font-display text-xs font-light mx-auto">
                 SOFTWARE ENGINEER
             </div>
+            <div className="flex flex-row items-between">
+                
+            </div>
         </div>
     </header>
 }
