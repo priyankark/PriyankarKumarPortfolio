@@ -1,7 +1,7 @@
 import '../styles/globals.css';
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { fab, faGithub,faLinkedin } from '@fortawesome/free-brands-svg-icons'
-library.add(fab,faGithub,faLinkedin);
+import "@fortawesome/fontawesome-svg-core/styles.css"; // import Font Awesome CSS
+import { config } from "@fortawesome/fontawesome-svg-core";
+config.autoAddCss = false; // Tell Font Awesome to skip adding the CSS automatically since it's being imported above
 
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />
