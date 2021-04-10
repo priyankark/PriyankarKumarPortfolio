@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import {Header} from '../components/Header';
+import {TimeLine} from '../components/TimeLine';
 
 export default function Home() {
   return (
@@ -9,6 +10,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header/>
+      <main className="w-full">
+      <div className="mt-8 ml-8">
+        <TimeLine/>
+      </div>
+      </main>
     </div>
   )
 }
