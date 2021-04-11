@@ -7,11 +7,14 @@ export const SkillsMap = () => {
         <h4 className="font-display font-bold">My Skills</h4>
         <div className="flex flex-row flex-wrap p-2">
             <Pill color='green' text='React.js'/>
-            <Pill color='green' text='Typescript'/>
-            <Pill color='green' text='Javascript'/>
+            <Pill color='green' text='TypeScript'/>
+            <Pill color='green' text='JavaScript'/>
+            <Pill color='green' text='HTML'/>
+            <Pill color='green' text='CSS'/>
             <Pill color='green' text='Alexa Skills'/>
             <Pill color='green' text='Python'/>
             <Pill color='green' text='Node.js'/>
+            <Pill color='green' text='Next.js'/>
             <Pill color='amber' text='ASP.NET'/>
             <Pill color='amber' text='C#'/>
             <Pill color='amber' text='Azure'/>
@@ -19,6 +22,7 @@ export const SkillsMap = () => {
             <Pill color='red' text='C'/>
             <Pill color='red' text='C++'/>
             <Pill color='red' text='Java'/>
+            <Pill color='red' text='Bootstrap'/>
             <Pill color='red' text='React Native'/>
             <Pill color='red' text='Big Data'/>
         </div>
