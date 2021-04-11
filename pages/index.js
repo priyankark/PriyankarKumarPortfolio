@@ -13,7 +13,6 @@ export default function Home() {
     <div className="w-screen">
       <Head>
         <title>Priyankar's Portfolio</title>
-        <link rel="icon" href="/favicon.ico" />
       </Head>
       <div>
         <Header />
