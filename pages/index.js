@@ -5,6 +5,8 @@ import { AboutMe } from '../components/AboutMe';
 import { SkillsMap } from '../components/SkillsMap';
 import { Projects } from '../components/Projects';
 import { Footer } from '../components/Footer';
+import { POR } from '../components/POR';
+import { Awards } from '../components/Awards';
 
 export default function Home() {
   return (
@@ -30,6 +32,14 @@ export default function Home() {
         </div>
         <div className="mt-8">
           <Projects />
+        </div>
+        <div className="mt-8 flex flex-row justify-evenly">
+          <div className="w-3/6">
+            <Awards />
+          </div>
+          <div className="w-3/6 ml-1">
+            <POR />
+          </div>
         </div>
       </main>
       <div className="mt-8">
