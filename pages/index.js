@@ -18,11 +18,11 @@ export default function Home() {
         <Header />
       </div>
       <main className="p-8">
-        <div className="flex flex-row sm:flex-wrap md:flex-nowrap justify-evenly">
-          <div className="md:w-3/6 sm:w-full">
+        <div className="flex flex-row sm:flex-wrap md:flex-wrap lg:flex-nowrap justify-evenly">
+          <div className="md:w-full sm:w-full lg:w-3/6">
             <TimeLine />
           </div>
-          <div className="md:w-3/6 sm:w-full md:ml-1 sm:mt-8 md:mt-0">
+          <div className="lg:w-3/6 sm:w-full md:w-full md:ml-1 sm:mt-8 md:lg-8 lg:mt-0">
             <AboutMe />
           </div>
         </div>
@@ -32,11 +32,11 @@ export default function Home() {
         <div className="mt-8">
           <Projects />
         </div>
-        <div className="mt-8 flex flex-row sm:flex-wrap md:flex-nowrap justify-evenly">
-          <div className="md:w-3/6 sm:w-full">
+        <div className="mt-8 flex flex-row sm:flex-wrap md:flex-wrap lg:flex-nowrap justify-evenly">
+          <div className="lg:w-3/6 md:w-full sm:w-full">
             <Awards />
           </div>
-          <div className="md:w-3/6 md:ml-1 md:mt-0 sm:w-full sm:mt-8">
+          <div className="lg:w-3/6 md:ml-1 lg:mt-0 sm:w-full md:w-full sm:mt-8 md:mt-8">
             <POR />
           </div>
         </div>
