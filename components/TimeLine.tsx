@@ -2,7 +2,7 @@ import * as React from 'react';
 import { StepperNav } from 'vertical-stepper-nav';
 
 const StepContent = (props: { dates: string, company: string, position: string }) => <div className="flex flex-row items-between text-xs font-semibold">
-    <span className="font-display text-primary rounded-lg bg-primary-300 p-1"> {props.dates} </span> <div className="ml-2 mt-1">{props.position}, {props.company} </div>
+    <span className="font-display text-primary rounded-lg z-10 bg-gray-100 shadow-lg p-1"> {props.dates} </span> <div className="ml-2 mt-1">{props.position}, {props.company} </div>
 </div>
 
 export const TimeLine = () => {

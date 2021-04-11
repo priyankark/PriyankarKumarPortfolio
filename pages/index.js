@@ -7,24 +7,24 @@ import { Projects } from '../components/Projects';
 
 export default function Home() {
   return (
-    <div className="w-full mr-2">
+    <div className="w-screen">
       <Head>
         <title>Priyankar's Portfolio</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="w-full mr-2">
+      <div>
         <Header />
       </div>
-      <main className="w-full mt-8 ml-8 mb-8 mr-8">
-        <div className="flex lg:flex-row">
+      <main className="p-8">
+        <div className="flex flex-row justify-evenly">
           <div className="w-3/6">
-            <AboutMe />
-          </div>
-          <div className="w-3/6 ml-1">
             <TimeLine />
           </div>
+          <div className="w-3/6 ml-1">
+            <AboutMe />
+          </div>
         </div>
-        <div className="mt-8 ">
+        <div className="mt-8">
           <SkillsMap />
         </div>
         <div className="mt-8">

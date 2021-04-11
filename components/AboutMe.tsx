@@ -2,7 +2,7 @@ import * as React from 'react';
  
 
 export const AboutMe = ()=>{
-    return <blockquote className="font-body p-2 rounded-lg shadow-lg md:w-5/6 ">
+    return <blockquote className="font-body p-2 rounded-lg shadow-lg">
         <h3 className="font-semibold font-display">About Me</h3>
         <p>
         I currently work as a software engineer at Microsoft in the CSX team (Commercial Sales Experience). 
