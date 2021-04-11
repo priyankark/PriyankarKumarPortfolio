@@ -14,7 +14,7 @@ export const TimeLine = () => {
             <StepperNav
                 steps={[
                     {
-                        stepContent: () => <StepContent dates={"July 2019 - Present"} position={'Software Engineer'} company={'Microsoft India Development Center'} />,
+                        stepContent: () => <StepContent dates={"July 2019 - Present"} position={'SWE'} company={'Microsoft IDC'} />,
                         stepStatusCircleSize: 24,
                         stepStateColor: "green"
                     },
@@ -24,7 +24,7 @@ export const TimeLine = () => {
                         stepStateColor: "#4338ca"
                     },
                     {
-                        stepContent: () => <StepContent dates={"Oct 2018 - June 2019"} position={'Software Developer (remote)'} company={'Voiceqube'} />,
+                        stepContent: () => <StepContent dates={"Oct 2018 - June 2019"} position={'SWE (remote)'} company={'Voiceqube'} />,
                         stepStatusCircleSize: 24,
                         stepStateColor: "#4338ca"
                     },

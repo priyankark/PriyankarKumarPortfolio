@@ -32,7 +32,7 @@ export default function Home() {
         <div className="mt-8">
           <Projects />
         </div>
-        <div className="flex flex-row flex-wrap lg:flex-nowrap justify-evenly">
+        <div className="flex flex-row flex-wrap lg:flex-nowrap justify-evenly mt-8">
           <div className="lg:w-3/6 w-full">
             <Awards />
           </div>
