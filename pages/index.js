@@ -2,7 +2,7 @@ import Head from 'next/head';
 import { Header } from '../components/Header';
 import { TimeLine } from '../components/TimeLine';
 import { AboutMe } from '../components/AboutMe';
-import {SkillsMap} from '../components/SkillsMap';
+import { SkillsMap } from '../components/SkillsMap';
 
 export default function Home() {
   return (
@@ -12,7 +12,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <main className="w-full mt-8 ml-8">
+      <main className="w-full mt-8 ml-8 mb-8">
         <div className="flex md:flex-row">
           <div className="w-3/6">
             <TimeLine />
@@ -21,7 +21,9 @@ export default function Home() {
             <AboutMe />
           </div>
         </div>
-        <SkillsMap/>
+        <div className="mt-8 mr-20">
+          <SkillsMap />
+        </div>
       </main>
     </div>
   )
