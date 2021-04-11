@@ -4,6 +4,7 @@ import { TimeLine } from '../components/TimeLine';
 import { AboutMe } from '../components/AboutMe';
 import { SkillsMap } from '../components/SkillsMap';
 import { Projects } from '../components/Projects';
+import { Footer } from '../components/Footer';
 
 export default function Home() {
   return (
@@ -31,6 +32,9 @@ export default function Home() {
           <Projects />
         </div>
       </main>
+      <div className="mt-8">
+        <Footer />
+      </div>
     </div>
   )
 }
