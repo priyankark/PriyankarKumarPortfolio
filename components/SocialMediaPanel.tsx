@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedin, faNpm, faTwitter, faGooglePlay } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelopeSquare } from '@fortawesome/free-solid-svg-icons';
 
 export const SocialMediaPanel = () => {
     return <div className="flex flex-row justify-between">
@@ -18,6 +19,9 @@ export const SocialMediaPanel = () => {
         </a>
         <a href="https://twitter.com/priyankar97" target="_blank" className="ml-2">
             <FontAwesomeIcon icon={faTwitter} />
+        </a>
+        <a href="mailto:priyankar.kumar98@gmail.com" target="_blank" className="ml-2">
+            <FontAwesomeIcon icon={faEnvelopeSquare} />
         </a>
     </div>
 }
