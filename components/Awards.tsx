@@ -6,6 +6,10 @@ const awards = [
         description: 'My contributions included product ideation and building the core capabilities of the product. The project also won another award in a Sponsored Hack titled "Observability Assistance."',
     },
     {
+        name: 'Quarterly Recognition Awards, Microsoft',
+        description: 'Won quarterly recognition awards multiple times for my contributions.',
+    },
+    {
         name: 'Nominated: Alexa Star developer of the year 2018, Amazon AI Conclave',
         description: 'Nominated as one of the top two nominees by Amazon among thousands of developers in India.'
     },
