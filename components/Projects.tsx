@@ -11,6 +11,31 @@ interface IPropsDescription {
 
 const projects = [
     {
+        name: 'Course: Alexa 101, Designing Voice Apps for Alexa',
+        description: 'An interactive course that teaches learners how to build voice apps for Alexa using practical examples and projects. Made in collaboration with Educative.',
+        link: () => {
+            return <div className="flex flex-row text-sm">
+                <a href="https://www.educative.io/courses/building-voice-apps-alexa" target="_blank" className="ml-2">
+                    Educative
+                </a>
+            </div>
+        }
+    },
+    {
+        name: 'Sensor Streamer',
+        description: 'An Android app that allows the user to stream phone sensor info, images and audio in realtime to a provided server running on their Raspberry Pi/computer.',
+        link: () => {
+            return <div className="flex flex-row text-sm">
+                <a href="https://play.google.com/store/apps/details?id=com.sensorsensei" target="_blank" className="ml-2">
+                    <FontAwesomeIcon icon={faGooglePlay} />
+                </a>
+                <a href="https://github.com/priyankark/SensorStreamServer" target="_blank" className="ml-2">
+                    <FontAwesomeIcon icon={faGithub} />
+                </a>
+            </div>
+        }
+    },
+    {
         name: 'Phone Pi Sensor Streamer',
         description: 'An Android app that allows the user to stream phone sensor info in realtime to a provided server running on their Raspberry Pi/computer.',
         link: () => {

@@ -2,6 +2,10 @@ import * as React from 'react';
 
 const positions = [
     {
+        name: 'Educator, Educative Inc.',
+        description: 'Curriculum Design and Course Development'
+    },
+    {
         name: 'Microsoft 4Afrika (2020-2021)',
         description: 'Peer mentoring college student. Providing technical and other guidance as part of Microsoft Aspire program.'
     },

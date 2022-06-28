@@ -2,6 +2,10 @@ import * as React from 'react';
 
 const awards = [
     {
+        name: 'Microsoft Hackathon 2021, Hack for Developer Productivity',
+        description: 'My contributions included product ideation and building the core capabilities of the product. The project also won another award in a Sponsored Hack titled "Observability Assistance."',
+    },
+    {
         name: 'Nominated: Alexa Star developer of the year 2018, Amazon AI Conclave',
         description: 'Nominated as one of the top two nominees by Amazon among thousands of developers in India.'
     },
@@ -39,7 +43,7 @@ export const Awards = () => {
         <div className="pl-8">
             <ul className="list-disc">
                 {awards.map((ele, index) => <li key={index} className="shadow-inner p-1">
-                   <span className="font-bold font-display"> {ele.name}: </span> {ele.description}
+                   <span className="font-bold font-display"> {ele.name} </span> {ele.description}
                 </li>)}
             </ul>
         </div>
