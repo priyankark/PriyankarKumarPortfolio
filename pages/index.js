@@ -8,6 +8,7 @@ import { Footer } from '../components/Footer';
 import { POR } from '../components/POR';
 import { Awards } from '../components/Awards';
 import ExperienceTimelineData from '../configs/experience_timeline.json';
+import ProjectsData from '../configs/projects.json';
 
 export default function Home() {
   return (
@@ -29,7 +30,7 @@ export default function Home() {
           <SkillsMap />
         </div>
         <div className="mt-8">
-          <Projects />
+          <Projects projects={ProjectsData} />
         </div>
         <div className="flex flex-row flex-wrap lg:flex-nowrap justify-evenly mt-8">
           <div className="lg:w-3/6 w-full">
