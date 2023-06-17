@@ -65,7 +65,7 @@ const StepCard: React.FC<{ step: Step }> = ({ step }) => (
 
 const Timeline: React.FC<{ steps: Step[] }> = ({ steps }) => (
   <div className="p-8 space-y-4 shadow-lg bg-white rounded-md">
-    <h2 className="text-2xl font-bold text-gray-900">Experience Timeline</h2>
+    <h2 className="text-xl font-bold text-gray-900">Experience Timeline</h2>
     <div className="space-y-6">
       {steps.map((step, index) => (
         <motion.div
