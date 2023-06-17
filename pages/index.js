@@ -32,13 +32,11 @@ export default function Home() {
         <div className="mt-8">
           <Projects projects={ProjectsData} />
         </div>
-        <div className="flex flex-row flex-wrap lg:flex-nowrap justify-evenly mt-8">
-          <div className="lg:w-3/6 w-full">
-            <Awards />
-          </div>
-          <div className="lg:w-3/6 lg:mt-0 w-full mt-8 lg:ml-1">
-            <POR />
-          </div>
+        <div className="w-full mt-8">
+          <Awards />
+        </div>
+        <div className="w-full mt-8">
+          <POR />
         </div>
       </main>
       <div className="mt-8">
