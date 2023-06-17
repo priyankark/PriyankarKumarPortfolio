@@ -1,51 +1,46 @@
-import * as React from 'react';
-import { StepperNav } from 'vertical-stepper-nav';
+import React from 'react';
+import { motion } from 'framer-motion';
 
-const StepContent = (props: { dates: string, company: string, position: string }) => <div className="flex flex-row items-between text-xs font-semibold">
-    <span className="font-display text-primary rounded-lg z-10 bg-gray-100 shadow-lg p-1"> {props.dates} </span> <div className="ml-2 mt-1">{props.position}, {props.company} </div>
-</div>
+const variants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0 },
+};
 
-export const TimeLine = () => {
-    return <div className="container flex flex-col z-10 rounded-lg shadow-lg">
-        <div className="container p-2 divide-y divide-primary-400 ">
-            <h2 className="display font-bold">Experience Timeline</h2>
-        </div>
-        <div className="p-2">
-            <StepperNav
-                steps={[
-                    {
-                        stepContent: () => <StepContent dates={"Mar 2022 - Current"} position={'SWE-2'} company={'OPG, E+D, Microsoft IDC'} />,
-                        stepStatusCircleSize: 24,
-                        stepStateColor: "darkgreen"
-                    },
-                    {
-                        stepContent: () => <StepContent dates={"July 2019 - Feb 2022"} position={'SWE'} company={'C+E, C+AI, Microsoft IDC'} />,
-                        stepStatusCircleSize: 24,
-                        stepStateColor: "#4338ca"
-                    },
-                    {
-                        stepContent: () => <StepContent dates={"Jan 2019 - June 2019"} position={'Project Trainee'} company={'CAIR, DRDO'} />,
-                        stepStatusCircleSize: 24,
-                        stepStateColor: "#4338ca"
-                    },
-                    {
-                        stepContent: () => <StepContent dates={"Oct 2018 - June 2019"} position={'SWE (remote)'} company={'Voiceqube'} />,
-                        stepStatusCircleSize: 24,
-                        stepStateColor: "#4338ca"
-                    },
-                    {
-                        stepContent: () => <StepContent dates={"Summer 2018"} position={'Summer Intern'} company={'Voycefirst'} />,
-                        stepStatusCircleSize: 24,
-                        stepStateColor: "#4338ca"
-                    },
-                    {
-                        stepContent: () => <StepContent dates={"Summer 2017"} position={'Summer Intern'} company={'IIIT Hyderabad'} />,
-                        stepStatusCircleSize: 24,
-                        stepStateColor: "#4338ca"
-                    }
-                ]}
-            />
-        </div>
+const StepCard = ({ step }) => (
+  <motion.div
+    className="flex space-x-4 items-start"
+    variants={variants}
+    initial="hidden"
+    animate="visible"
+  >
+    <div className="flex-shrink-0">
+      <div className="h-8 w-8 rounded-full bg-blue-500 flex items-center justify-center">
+        <span className="text-white font-semibold">•</span>
+      </div>
     </div>
+    <div>
+      <div className="text-lg font-semibold text-gray-900 hover:text-blue-500 transition-colors duration-300">
+        {step.position}
+      </div>
+      <div className="text-sm text-gray-500">{step.company}</div>
+      <div className="text-xs text-gray-400">{step.dates}</div>
+    </div>
+  </motion.div>
+);
 
-}
+const Timeline = ({ steps }) => {
+  return (
+    <div className="p-8 space-y-4 shadow-lg bg-white rounded-md">
+      <h2 className="text-2xl font-bold text-gray-900">Experience Timeline</h2>
+      <div className="space-y-6">
+        {steps.map((step, index) => (
+          <div key={index} className="hover:shadow-lg">
+            <StepCard step={step} />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default Timeline;
