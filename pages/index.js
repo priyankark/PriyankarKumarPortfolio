@@ -23,7 +23,7 @@ export default function Home() {
         </div>
         <div className="w-full">
           <TimeLine steps={[
-            { dates: "Mar 2022 - Current", position: 'SWE-2', company: 'OPG, E+D, Microsoft IDC' },
+            { dates: "Mar 2022 - Current", position: 'SWE-2', company: 'OPG, E+D, Microsoft IDC', description: ["working on M365 Copilot"], skills: ["TypeScript", "NodeJS", "ReactJS", "Open AI", "LLM", "Prompt Engineering", "Python"] },
             { dates: "July 2019 - Feb 2022", position: 'SWE', company: 'C+E, C+AI, Microsoft IDC' },
             { dates: "Jan 2019 - June 2019", position: 'Project Trainee', company: 'CAIR, DRDO' },
             { dates: "Oct 2018 - June 2019", position: 'SWE (remote)', company: 'Voiceqube' },
