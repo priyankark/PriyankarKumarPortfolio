@@ -2,10 +2,12 @@ import * as React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faNpm, faGooglePlay, faAmazon } from '@fortawesome/free-brands-svg-icons';
 import { faPaperclip } from '@fortawesome/free-solid-svg-icons';
+import { motion } from "framer-motion";
 
 interface IPropsDescription {
     name: string;
     description: string;
+    image?: string;
     link: {
         url: string,
         iconType: 'github' | 'npm' | 'googlePlay' | 'amazon' | 'paperclip'
@@ -35,37 +37,40 @@ const IconMapper = (iconType: 'github' | 'npm' | 'googlePlay' | 'amazon' | 'pape
 
 export const ProjectDescriptionCard = (props: IPropsDescription) => {
     return (
-        <div className="shadow-inner p-2">
-            <div className="grid grid-cols-3 divide-x divide-gray-500">
-                <div className="font-display font-bold p-2 my-auto">{props.name}</div>
-                <div className="font-body p-2 ">{props.description}</div>
-                <div className="p-2">
-                    <div className="flex flex-row">
-                        {
-                            props.link.map((linkObj, index) => (
-                                <a key={index} href={linkObj.url} target="_blank" className="ml-2">
-                                    <FontAwesomeIcon icon={IconMapper(linkObj.iconType)} />
-                                </a>
-                            ))
-                        }
-                    </div>
+        <motion.div 
+            className="shadow-lg p-4 my-2 bg-white rounded-xl grid grid-cols-1 sm:grid-cols-3 divide-x divide-gray-200"
+            whileHover={{ scale: 1.02 }}
+            transition={{ type: "spring", stiffness: 300 }}
+        >
+            {props.image && <img src={props.image} alt={props.name} className="h-20 w-full sm:h-auto sm:w-1/3 object-cover rounded-lg" />}
+            <div className="font-display font-bold p-2 my-auto">{props.name}</div>
+            <div className="font-body p-2">{props.description}</div>
+            <div className="p-2">
+                <div className="flex flex-row">
+                    {
+                        props.link.map((linkObj, index) => (
+                            <a key={index} href={linkObj.url} target="_blank" rel="noopener noreferrer" className="ml-2">
+                                <FontAwesomeIcon icon={IconMapper(linkObj.iconType)} />
+                            </a>
+                        ))
+                    }
                 </div>
             </div>
-        </div>
+        </motion.div>
     )
 }
 
 export const Projects = (props: IPropsProjects) => {
     return (
-        <div className="w-full z-10 shadow-lg mr-8">
+        <motion.div className="w-full z-10 shadow-lg mr-8">
             <h3 className="p-2 font-display font-bold">Personal Projects Showcase (Select)</h3>
             <div>
                 {
                     props.projects.map((project, index) => (
-                        <ProjectDescriptionCard key={index} name={project.name} description={project.description} link={project.link} />
+                        <ProjectDescriptionCard key={index} {...project} />
                     ))
                 }
             </div>
-        </div>
+        </motion.div>
     )
 }
