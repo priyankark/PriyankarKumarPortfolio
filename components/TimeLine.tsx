@@ -1,5 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
+
 
 interface Step {
   position: string;
@@ -19,12 +21,12 @@ const sectionVariants = {
   visible: { opacity: 1, x: 0 },
 };
 
-const StepCard: React.FC<{ step: Step }> = ({ step }) => (
+const StepCard: React.FC<{ step: Step; inView: boolean }> = ({ step, inView }) => (
   <motion.div
     className="flex space-x-4 items-start bg-white p-4 rounded-md shadow-lg"
     variants={cardVariants}
     initial="hidden"
-    animate="visible"
+    animate={inView ? 'visible' : 'hidden'}
   >
     <div className="flex-shrink-0">
       <div className="relative h-8 w-8">
@@ -67,25 +69,33 @@ const Timeline: React.FC<{ steps: Step[] }> = ({ steps }) => (
   <div className="p-8 space-y-4 shadow-lg bg-white rounded-md">
     <h2 className="text-xl font-bold text-gray-900">Experience Timeline</h2>
     <div className="space-y-6">
-      {steps.map((step, index) => (
-        <motion.div
-          key={index}
-          className="hover:shadow-lg"
-          initial="hidden"
-          animate="visible"
-          variants={{
-            hidden: { opacity: 0 },
-            visible: {
-              opacity: 1,
-              transition: {
-                delay: index * 0.1,
+      {steps.map((step, index) => {
+        const { ref, inView } = useInView({
+          triggerOnce: true, // Change to false if you want the animation to trigger again whenever it comes in view
+          threshold: 0.1, // Percentage of the element that is in view before the callback triggers
+        });
+
+        return (
+          <motion.div
+            key={index}
+            className="hover:shadow-lg"
+            initial="hidden"
+            animate="visible"
+            variants={{
+              hidden: { opacity: 0 },
+              visible: {
+                opacity: 1,
+                transition: {
+                  delay: index * 0.1,
+                },
               },
-            },
-          }}
-        >
-          <StepCard step={step} />
-        </motion.div>
-      ))}
+            }}
+            ref={ref}
+          >
+            <StepCard step={step} inView={inView} />
+          </motion.div>
+        );
+      })}
     </div>
   </div>
 );
