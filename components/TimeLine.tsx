@@ -1,6 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
+interface Step {
+  position: string;
+  company: string;
+  dates: string;
+  description: string[];
+  skills: string[];
+}
+
 const cardVariants = {
   hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0 },
@@ -11,7 +19,7 @@ const sectionVariants = {
   visible: { opacity: 1, x: 0 },
 };
 
-const StepCard = ({ step }) => (
+const StepCard: React.FC<{ step: Step }> = ({ step }) => (
   <motion.div
     className="flex space-x-4 items-start bg-white p-4 rounded-md shadow-lg"
     variants={cardVariants}
@@ -27,7 +35,7 @@ const StepCard = ({ step }) => (
       </div>
     </div>
     <motion.div
-      className="flex-grow"
+      className="flex flex-1 flex-col"
       variants={sectionVariants}
       initial="hidden"
       animate="visible"
@@ -37,23 +45,10 @@ const StepCard = ({ step }) => (
       </div>
       <div className="text-sm text-gray-500">{step.company}</div>
       <div className="text-xs text-gray-400">{step.dates}</div>
-    </motion.div>
-    <motion.div
-      className="flex-grow"
-      variants={sectionVariants}
-      initial="hidden"
-      animate="visible"
-    >
       <ul className="list-disc list-inside text-sm text-gray-700">
         {step?.description?.map((item, idx) => <li key={idx}>{item}</li>)}
       </ul>
-    </motion.div>
-    <motion.div
-      className="flex-grow"
-      variants={sectionVariants}
-      initial="hidden"
-      animate="visible"
-    >
+      <hr className="my-2" /> {/* Add this for a divider */}
       <div className="flex flex-wrap gap-2">
         {step?.skills?.map((skill, idx) => (
           <div
@@ -67,7 +62,8 @@ const StepCard = ({ step }) => (
   </motion.div>
 );
 
-const Timeline = ({ steps }) => (
+
+const Timeline: React.FC<{ steps: Step[] }> = ({ steps }) => (
   <div className="p-8 space-y-4 shadow-lg bg-white rounded-md">
     <h2 className="text-2xl font-bold text-gray-900">Experience Timeline</h2>
     <div className="space-y-6">
@@ -87,7 +83,7 @@ const Timeline = ({ steps }) => (
             },
           }}
         >
-          {step && <StepCard step={step} />}
+          <StepCard step={step} />
         </motion.div>
       ))}
     </div>
