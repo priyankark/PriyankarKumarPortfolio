@@ -1,39 +1,41 @@
 import * as React from 'react';
-
-const positions = [
-    {
-        name: 'Educator, Educative Inc.',
-        description: 'Curriculum Design and Course Development'
-    },
-    {
-        name: 'Microsoft 4Afrika (2020-2021)',
-        description: 'Peer mentoring college student. Providing technical and other guidance as part of Microsoft Aspire program.'
-    },
-    {
-        name: 'Newtonschool Mentor (2020-2021)',
-        description: 'Helping a cohort of 10 college students take their first steps in the tech industry.'
-    },
-    {
-        name: 'Teach Code For Good (2018)',
-        description: 'Taught Python to kids in a government school.'
-    },
-    {
-        name: 'Amazon Alexa Student Influencer',
-        description: 'Mentored students in my college in the voice space as part of an official Amazon program for students.',
-    }, 
-]
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
+import VolunteeringData from '../configs/volunteering.json';
 
 export const POR = () => {
-    return <div className="z-10 shadow-lg flex flex-col p-2">
-        <div>
-            <h3 className="font-display font-bold">Volunteering</h3>
-        </div>
-        <div className="pl-8">
-            <ul className="list-disc">
-                {positions.map((ele, index) => <li key={index} className="shadow-inner p-1">
-                   <span className="font-bold font-display"> {ele.name}: </span> {ele.description}
-                </li>)}
+    const porVariants = {
+        hidden: { opacity: 0 },
+        visible: { opacity: 1, transition: { duration: 0.5 } }
+    }
+    const controls = useAnimation();
+    const { ref, inView } = useInView({
+        threshold: 0.1,
+    });
+
+    React.useEffect(() => {
+        if (inView) {
+            controls.start("visible");
+        }
+    }, [controls, inView]);
+
+    return (
+        <div className="z-10 shadow-lg flex flex-col p-8 bg-white rounded-lg" ref={ref}>
+            <h3 className="font-display font-bold text-2xl text-black mb-4">Volunteering</h3>
+            <ul className="space-y-4">
+                {VolunteeringData.map((ele, index) => (
+                    <motion.li 
+                        key={index} 
+                        className="shadow-inner p-4 bg-gray-100 rounded-lg"
+                        variants={porVariants}
+                        initial='hidden'
+                        animate={controls}
+                    >
+                        <span className="font-bold font-display text-lg text-black"> {ele.name}: </span> 
+                        <p className="text-gray-800">{ele.description}</p>
+                    </motion.li>
+                ))}
             </ul>
         </div>
-    </div>
+    )
 }

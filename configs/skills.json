@@ -1,0 +1,78 @@
+[
+    {
+        "color": "green",
+        "text": "React.js"
+    },
+    {
+        "color": "green",
+        "text": "TypeScript"
+    },
+    {
+        "color": "green",
+        "text": "JavaScript"
+    },
+    {
+        "color": "green",
+        "text": "HTML"
+    },
+    {
+        "color": "green",
+        "text": "CSS"
+    },
+    {
+        "color": "green",
+        "text": "Alexa Skills"
+    },
+    {
+        "color": "green",
+        "text": "Python"
+    },
+    {
+        "color": "green",
+        "text": "Node.js"
+    },
+    {
+        "color": "green",
+        "text": "Next.js"
+    },
+    {
+        "color": "amber",
+        "text": "ASP.NET"
+    },
+    {
+        "color": "amber",
+        "text": "C#"
+    },
+    {
+        "color": "amber",
+        "text": "Azure"
+    },
+    {
+        "color": "amber",
+        "text": "Google Assistant Actions"
+    },
+    {
+        "color": "red",
+        "text": "C"
+    },
+    {
+        "color": "red",
+        "text": "C++"
+    },
+    {
+        "color": "red",
+        "text": "Java"
+    },
+    {
+        "color": "red",
+        "text": "Bootstrap"
+    },
+    {
+        "color": "red",
+        "text": "React Native"
+    },
+    {
+        "color": "red",
+        "text": "Big Data"
+    }
+]

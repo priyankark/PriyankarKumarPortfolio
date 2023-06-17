@@ -1,51 +1,103 @@
-import * as React from 'react';
-import { StepperNav } from 'vertical-stepper-nav';
+import React from 'react';
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
-const StepContent = (props: { dates: string, company: string, position: string }) => <div className="flex flex-row items-between text-xs font-semibold">
-    <span className="font-display text-primary rounded-lg z-10 bg-gray-100 shadow-lg p-1"> {props.dates} </span> <div className="ml-2 mt-1">{props.position}, {props.company} </div>
-</div>
 
-export const TimeLine = () => {
-    return <div className="container flex flex-col z-10 rounded-lg shadow-lg">
-        <div className="container p-2 divide-y divide-primary-400 ">
-            <h2 className="display font-bold">Experience Timeline</h2>
-        </div>
-        <div className="p-2">
-            <StepperNav
-                steps={[
-                    {
-                        stepContent: () => <StepContent dates={"Mar 2022 - Current"} position={'SWE-2'} company={'OPG, E+D, Microsoft IDC'} />,
-                        stepStatusCircleSize: 24,
-                        stepStateColor: "darkgreen"
-                    },
-                    {
-                        stepContent: () => <StepContent dates={"July 2019 - Feb 2022"} position={'SWE'} company={'C+E, C+AI, Microsoft IDC'} />,
-                        stepStatusCircleSize: 24,
-                        stepStateColor: "#4338ca"
-                    },
-                    {
-                        stepContent: () => <StepContent dates={"Jan 2019 - June 2019"} position={'Project Trainee'} company={'CAIR, DRDO'} />,
-                        stepStatusCircleSize: 24,
-                        stepStateColor: "#4338ca"
-                    },
-                    {
-                        stepContent: () => <StepContent dates={"Oct 2018 - June 2019"} position={'SWE (remote)'} company={'Voiceqube'} />,
-                        stepStatusCircleSize: 24,
-                        stepStateColor: "#4338ca"
-                    },
-                    {
-                        stepContent: () => <StepContent dates={"Summer 2018"} position={'Summer Intern'} company={'Voycefirst'} />,
-                        stepStatusCircleSize: 24,
-                        stepStateColor: "#4338ca"
-                    },
-                    {
-                        stepContent: () => <StepContent dates={"Summer 2017"} position={'Summer Intern'} company={'IIIT Hyderabad'} />,
-                        stepStatusCircleSize: 24,
-                        stepStateColor: "#4338ca"
-                    }
-                ]}
-            />
-        </div>
-    </div>
-
+interface Step {
+  position: string;
+  company: string;
+  dates: string;
+  description: string[];
+  skills: string[];
 }
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0 },
+};
+
+const sectionVariants = {
+  hidden: { opacity: 0, x: -20 },
+  visible: { opacity: 1, x: 0 },
+};
+
+const StepCard: React.FC<{ step: Step; inView: boolean }> = ({ step, inView }) => (
+  <motion.div
+    className="flex space-x-4 items-start bg-white p-4 rounded-md shadow-lg"
+    variants={cardVariants}
+    initial="hidden"
+    animate={inView ? 'visible' : 'hidden'}
+  >
+    <div className="flex-shrink-0">
+      <div className="relative h-8 w-8">
+        <div className="absolute h-2 w-2 rounded-full bg-blue-500 top-3 left-3"></div>
+        <div className="h-8 w-8 rounded-full bg-blue-500 flex items-center justify-center">
+          <span className="text-white font-semibold">•</span>
+        </div>
+      </div>
+    </div>
+    <motion.div
+      className="flex flex-1 flex-col"
+      variants={sectionVariants}
+      initial="hidden"
+      animate="visible"
+    >
+      <div className="text-lg font-semibold text-gray-900 hover:text-blue-500 transition-colors duration-300">
+        {step.position}
+      </div>
+      <div className="text-sm text-gray-500">{step.company}</div>
+      <div className="text-xs text-gray-400">{step.dates}</div>
+      <ul className="list-disc list-inside text-sm text-gray-700">
+        {step?.description?.map((item, idx) => <li key={idx}>{item}</li>)}
+      </ul>
+      <hr className="my-2" /> {/* Add this for a divider */}
+      <div className="flex flex-wrap gap-2">
+        {step?.skills?.map((skill, idx) => (
+          <div
+            key={idx}
+            className="px-2 py-1 bg-gray-100 text-sm rounded-full shadow-md">
+            {skill}
+          </div>
+        ))}
+      </div>
+    </motion.div>
+  </motion.div>
+);
+
+
+const Timeline: React.FC<{ steps: Step[] }> = ({ steps }) => (
+  <div className="p-8 space-y-4 shadow-lg bg-white rounded-md">
+    <h2 className="text-xl font-bold text-gray-900">Experience Timeline</h2>
+    <div className="space-y-6">
+      {steps.map((step, index) => {
+        const { ref, inView } = useInView({
+          triggerOnce: true, // Change to false if you want the animation to trigger again whenever it comes in view
+          threshold: 0.1, // Percentage of the element that is in view before the callback triggers
+        });
+
+        return (
+          <motion.div
+            key={index}
+            className="hover:shadow-lg"
+            initial="hidden"
+            animate="visible"
+            variants={{
+              hidden: { opacity: 0 },
+              visible: {
+                opacity: 1,
+                transition: {
+                  delay: index * 0.1,
+                },
+              },
+            }}
+            ref={ref}
+          >
+            <StepCard step={step} inView={inView} />
+          </motion.div>
+        );
+      })}
+    </div>
+  </div>
+);
+
+export default Timeline;
