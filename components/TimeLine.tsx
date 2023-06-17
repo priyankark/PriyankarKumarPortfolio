@@ -14,8 +14,11 @@ const StepCard = ({ step }) => (
     animate="visible"
   >
     <div className="flex-shrink-0">
-      <div className="h-8 w-8 rounded-full bg-blue-500 flex items-center justify-center">
-        <span className="text-white font-semibold">•</span>
+      <div className="relative h-8 w-8">
+        <div className="absolute h-2 w-2 rounded-full bg-blue-500 top-3 left-3"></div>
+        <div className="h-8 w-8 rounded-full bg-blue-500 flex items-center justify-center">
+          <span className="text-white font-semibold">•</span>
+        </div>
       </div>
     </div>
     <div>
