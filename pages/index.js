@@ -21,7 +21,7 @@ export default function Home() {
         <div className="w-full">
           <AboutMe />
         </div>
-        <div className="w-full">
+        <div className="w-full mt-8">
           <TimeLine steps={[
             {
               dates: "Mar 2022 - Current", position: 'SWE-2', company: 'OPG, E+D, Microsoft IDC', description: [
