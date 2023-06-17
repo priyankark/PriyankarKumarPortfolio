@@ -62,7 +62,7 @@ export const SkillsMap = () => {
         <div className="flex flex-col w-full justify-evenly rounded-lg shadow-lg border p-2">
             <h4 className="font-display font-bold mr-4">Skills</h4>
             <hr className="mt-2" />
-            <div className="flex mt-4">
+            <div className="flex mt-4 ml-4">
                 <p><span className="inline-block w-4 h-4 mr-2 bg-green-400"></span>Most experienced in</p>
                 <p><span className="inline-block w-4 h-4 mr-2 ml-2 bg-amber-400"></span>Medium level of experience</p>
                 <p><span className="inline-block w-4 h-4 mr-2 ml-2 bg-red-400"></span>Also experienced in</p>
