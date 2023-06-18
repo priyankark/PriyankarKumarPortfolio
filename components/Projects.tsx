@@ -1,8 +1,10 @@
 import * as React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faNpm, faGooglePlay, faAmazon } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faNpm, faGooglePlay, faAmazon, faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faPaperclip } from '@fortawesome/free-solid-svg-icons';
 import { motion } from "framer-motion";
+
+type IconTypes = 'github' | 'npm' | 'googlePlay' | 'amazon' | 'paperclip' | 'twitter' | 'linkedin';
 
 interface IPropsDescription {
     name: string;
@@ -10,7 +12,7 @@ interface IPropsDescription {
     image?: string;
     link: {
         url: string,
-        iconType: 'github' | 'npm' | 'googlePlay' | 'amazon' | 'paperclip'
+        iconType: IconTypes
     }[];
 }
 
@@ -18,7 +20,7 @@ interface IPropsProjects {
     projects: IPropsDescription[];
 }
 
-const IconMapper = (iconType: 'github' | 'npm' | 'googlePlay' | 'amazon' | 'paperclip') => {
+const IconMapper = (iconType: IconTypes) => {
     switch (iconType) {
         case 'github':
             return faGithub;
@@ -30,6 +32,10 @@ const IconMapper = (iconType: 'github' | 'npm' | 'googlePlay' | 'amazon' | 'pape
             return faAmazon;
         case 'paperclip':
             return faPaperclip;
+        case 'twitter':
+            return faTwitter;
+        case 'linkedin':
+            return faLinkedin;
         default:
             return faGithub;
     }
