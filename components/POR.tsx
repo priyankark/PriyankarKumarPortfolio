@@ -31,7 +31,7 @@ export const POR = () => {
                         initial='hidden'
                         animate={controls}
                     >
-                        <span className="font-bold font-display text-lg text-black"> {ele.name}: </span> 
+                        <span className="font-bold font-display text-lg text-black"> {ele.name} </span> 
                         <p className="text-gray-800">{ele.description}</p>
                     </motion.li>
                 ))}
