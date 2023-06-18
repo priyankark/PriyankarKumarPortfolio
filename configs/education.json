@@ -10,6 +10,7 @@
         "schoolName": "Georgia Institute of Technology",
         "degree": "Professional Certificate in Human-Computer Interaction",
         "description": "",
+        "credentialId": "",
         "courses": ["HCI Course"],
         "years": "Issued Feb 2022",
         "link": "https://credentials.edx.org/credentials/431ae37a14494f21a7aa6fd8a55d12c3/"
