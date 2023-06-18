@@ -40,6 +40,16 @@
         ]
     },
     {
+        "name": "Wordle Helper",
+        "description": "Simple Edge Extension meant to be the perfect companion to Wordle. Simply enter the letters you already know and use the provided suggestions to brainstorm on what the word of the day could be.",
+        "link": [
+            {
+                "url": "https://microsoftedge.microsoft.com/addons/detail/wordle-helper/iakehablnhhhndnloonfopbgebhgekid",
+                "iconType": "paperclip"
+            }
+        ]
+    },
+    {
         "name": "Course: Alexa 101, Designing Voice Apps for Alexa",
         "description": "An interactive course that teaches learners how to build voice apps for Alexa using practical examples and projects. Made in collaboration with Educative.",
         "link": [

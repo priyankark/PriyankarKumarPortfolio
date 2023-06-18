@@ -1,10 +1,6 @@
 [
     {
         "color": "green",
-        "text": "React.js"
-    },
-    {
-        "color": "green",
         "text": "TypeScript"
     },
     {
@@ -13,11 +9,47 @@
     },
     {
         "color": "green",
-        "text": "HTML"
+        "text": "React.js"
     },
     {
         "color": "green",
-        "text": "CSS"
+        "text": "Open AI APIs"
+    },
+    {
+        "color": "green",
+        "text": "Prompt Engineering"
+    },
+    {
+        "color": "green",
+        "text": "GPT-4"
+    },
+    {
+        "color": "green",
+        "text": "GPT-3"
+    },
+    {
+        "color": "green",
+        "text": "Node.js"
+    },
+    {
+        "color": "green",
+        "text": "Next.js"
+    },
+    {
+        "color": "green",
+        "text": "VS Code Extensions Development"
+    },
+    {
+        "color": "green",
+        "text": "Azure"
+    },
+    {
+        "color": "green",
+        "text": "Msft Edge Extensions Development"
+    },
+    {
+        "color": "green",
+        "text": "AWS"
     },
     {
         "color": "green",
@@ -29,11 +61,11 @@
     },
     {
         "color": "green",
-        "text": "Node.js"
+        "text": "HTML"
     },
     {
         "color": "green",
-        "text": "Next.js"
+        "text": "CSS"
     },
     {
         "color": "amber",
