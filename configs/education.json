@@ -1,0 +1,18 @@
+[
+    {
+        "schoolName": "Manipal Institute of Technology",
+        "degree": "Bachelor of Technology (B.Tech.), Computer Science & Engineering",
+        "description": "Minored in Big Data",
+        "courses": [],
+        "years": "2015 - 2019"
+    },
+    {
+        "schoolName": "Georgia Institute of Technology",
+        "degree": "Professional Certificate in Human-Computer Interaction",
+        "description": "",
+        "courses": ["HCI Course"],
+        "years": "Issued Feb 2022 · Expired Sep 2022",
+        "credentialId": "431ae37a14494f21a7aa6fd8a55d12c3",
+        "link": "https://credentials.edx.org/credentials/431ae37a14494f21a7aa6fd8a55d12c3/"
+    }
+]

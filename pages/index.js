@@ -7,6 +7,7 @@ import { Projects } from '../components/Projects';
 import { Footer } from '../components/Footer';
 import { POR } from '../components/POR';
 import { Awards } from '../components/Awards';
+import {Education} from '../components/Education';
 import ExperienceTimelineData from '../configs/experience_timeline.json';
 import ProjectsData from '../configs/projects.json';
 
@@ -25,6 +26,9 @@ export default function Home() {
         </div>
         <div className="w-full mt-8">
           <TimeLine steps={ExperienceTimelineData} />
+        </div>
+        <div className="w-full mt-8">
+          <Education/>
         </div>
         <div className="mt-8">
           <SkillsMap />
