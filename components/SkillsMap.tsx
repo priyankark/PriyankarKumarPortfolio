@@ -63,6 +63,7 @@ export const SkillsMap = () => {
             <h4 className="font-display font-bold mr-4">Skills</h4>
             <hr className="mt-2" />
             <div className="flex mt-4 ml-4">
+                <p className="mr-2">Level of Experience:</p>
                 <p><span className="inline-block w-4 h-4 mr-2 bg-green-400"></span>High</p>
                 <p><span className="inline-block w-4 h-4 mr-2 ml-2 bg-amber-400"></span>Mid</p>
                 <p><span className="inline-block w-4 h-4 mr-2 ml-2 bg-red-400"></span>Low</p>
