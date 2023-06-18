@@ -21,6 +21,7 @@ export const Footer = () => {
           <button
             className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded inline-flex items-center"
             style={{backgroundColor: "black"}}
+            onClick={() => window.open("https://github.com/priyankark/PriyankarKumarPortfolio", "_blank")}
           >
             <FontAwesomeIcon icon={faGithub} className="mr-2" />
             Clone my portfolio
