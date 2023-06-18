@@ -1,7 +1,7 @@
 [
     {
         "name": "Pictioner",
-        "description": "Pictioner is a fun guessing game where users need to guess what GPT draws on the canvas within three tries. Users proceed to next rounds as they keep guessing things right or are eliminated when they get a guess wrong. Be ready for endless fun! Pictioner was featured on Product Hunt in May 2023.",
+        "description": "Pictioner is an engaging game where users are challenged to guess what GPT sketches on the canvas within three attempts. Success leads to subsequent rounds, whereas a wrong guess results in elimination. Prepare for unending fun! Pictioner was spotlighted on Product Hunt in May 2023.",
         "link": [
             {
                 "url": "https://www.pictioner.com",
@@ -15,7 +15,7 @@
     },
     {
         "name": "Hello Cody: A Voice Assistant for VS Code",
-        "description": "Built as part of Microsoft's internal 'Global Hackathon' where the project won the first place in the developer productivity challenge, this project is now part of GitHub Copilot X. My contributions included initiating the project, pitching to Microsoft and GitHub execs to get buy-in and then collaborating with the GitHub Next team to make it a reality. The project also led to multiple patent filings.",
+        "description": "Emerging as the winner in the developer productivity challenge of Microsoft's internal 'Global Hackathon', this project has evolved to become part of GitHub Copilot X. My contributions included project initiation, proposal to Microsoft and GitHub executives for approval, and cooperation with the GitHub Next team to bring the project to fruition. The project was launched in the GitHub Universe conference and has also resulted in multiple patent filings.",
         "link": [
             {
                 "url": "https://githubnext.com/projects/copilot-voice/",
@@ -41,7 +41,7 @@
     },
     {
         "name": "Wordle Helper",
-        "description": "Simple Edge Extension meant to be the perfect companion to Wordle. Simply enter the letters you already know and use the provided suggestions to brainstorm on what the word of the day could be.",
+        "description": "A handy Edge Extension designed to accompany Wordle. Input the letters you already know and use the provided suggestions to brainstorm on the possible word of the day.",
         "link": [
             {
                 "url": "https://microsoftedge.microsoft.com/addons/detail/wordle-helper/iakehablnhhhndnloonfopbgebhgekid",
@@ -51,7 +51,7 @@
     },
     {
         "name": "Course: Alexa 101, Designing Voice Apps for Alexa",
-        "description": "An interactive course that teaches learners how to build voice apps for Alexa using practical examples and projects. Made in collaboration with Educative.",
+        "description": "A comprehensive, interactive course on how to create voice apps for Alexa, featuring practical examples and hands-on projects. Developed in collaboration with Educative.",
         "link": [
             {
                 "url": "https://www.educative.io/courses/building-voice-apps-alexa",
@@ -61,7 +61,7 @@
     },
     {
         "name": "Sensor Streamer",
-        "description": "An Android app that allows the user to stream phone sensor info, images and audio in realtime to a provided server running on their Raspberry Pi/computer.",
+        "description": "An Android app enabling users to stream phone sensor data, images, and audio in real-time to a server hosted on their Raspberry Pi or computer. The project has served thousands of users and has a high rating and positive reviews on Google Play.",
         "link": [
             {
                 "url": "https://play.google.com/store/apps/details?id=com.sensorsensei",
@@ -75,7 +75,7 @@
     },
     {
         "name": "Phone Pi Sensor Streamer",
-        "description": "An Android app that allows the user to stream phone sensor info in realtime to a provided server running on their Raspberry Pi/computer.",
+        "description": "An Android app that lets users stream phone sensor data in real-time to a specified server running on their Raspberry Pi or computer.",
         "link": [
             {
                 "url": "https://play.google.com/store/apps/details?id=com.phonepi&hl=en_IN&gl=US",
@@ -89,7 +89,7 @@
     },
     {
         "name": "Resolution Tracker",
-        "description": "An Amazon Alexa Skill that helps keep track of your new year resolutions and helps tweet your progress to your followers. Resolution Tracker was awarded 'Skill of the month' in December 2017 by Amazon.",
+        "description": "An Amazon Alexa Skill designed to monitor your New Year resolutions and conveniently update your progress via Twitter. Resolution Tracker was honored as the 'Skill of the Month' in December 2017 by Amazon.",
         "link": [
             {
                 "url": "https://www.amazon.com/Priyankar-Kumar-Resolution-Tracker/dp/B078HHJHF5/ref=sr_1_3?dchild=1&keywords=resolution+tracker&qid=1618128208&s=digital-skills&sr=1-3",
@@ -99,7 +99,7 @@
     },
     {
         "name": "Trivia Quest",
-        "description": "An Amazon Alexa game to test your wits and climb on top of a global leaderboard! Trivia Quest has been played by thousands of Alexa users from around the world and has been rated 3.2/5 on Amazon.",
+        "description": "An Amazon Alexa game designed to test your knowledge. Strive to reach the top of the global leaderboard! Trivia Quest has been enjoyed by thousands of Alexa users worldwide and has a 3.2/5 rating on Amazon.",
         "link": [
             {
                 "url": "https://www.amazon.com/Invoke-Genie-Trivia-Quest/dp/B07MKPRVPB/ref=sr_1_1?dchild=1&keywords=trivia+quest+alexa&qid=1618128305&sr=8-1",
@@ -109,7 +109,7 @@
     },
     {
         "name": "Multi-step Wizard Fluent",
-        "description": "A fully customizable React component to build your own multi-step forms.",
+        "description": "A fully adaptable React component designed for creating personalized multi-step forms.",
         "link": [
             {
                 "url": "https://www.npmjs.com/package/multistep-wizard-fluent",
@@ -123,7 +123,7 @@
     },
     {
         "name": "Voice Clues",
-        "description": "A cross platform voice game available on Google Assistant and Amazon Alexa built using Jovo.",
+        "description": "A cross-platform voice game accessible on Google Assistant and Amazon Alexa, developed using Jovo. The project was awarded first place in the Alexa Skills Wizard challenge (for university students) by Amazon.",
         "link": [
             {
                 "url": "https://www.amazon.in/Priyankar-Kumar-Voice-Clues/dp/B07JJQGPL3/ref=sr_1_1?ie=UTF8&qid=1540278564&sr=8-1&keywords=Voice+Clues",
@@ -141,7 +141,7 @@
     },
     {
         "name": "SMS Genie",
-        "description": "An SMS bot to aid in education in remote areas where internet penetration is poor.",
+        "description": "An educational SMS bot developed to assist learning in remote areas with limited internet connectivity.",
         "link": [
             {
                 "url": "https://devpost.com/software/sms-genie?ref_content=user-portfolio&ref_feature=in_progress",
