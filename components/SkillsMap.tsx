@@ -63,9 +63,9 @@ export const SkillsMap = () => {
             <h4 className="font-display font-bold mr-4">Skills</h4>
             <hr className="mt-2" />
             <div className="flex mt-4 ml-4">
-                <p><span className="inline-block w-4 h-4 mr-2 bg-green-400"></span>Most experienced in</p>
-                <p><span className="inline-block w-4 h-4 mr-2 ml-2 bg-amber-400"></span>Medium level of experience</p>
-                <p><span className="inline-block w-4 h-4 mr-2 ml-2 bg-red-400"></span>Also experienced in</p>
+                <p><span className="inline-block w-4 h-4 mr-2 bg-green-400"></span>High</p>
+                <p><span className="inline-block w-4 h-4 mr-2 ml-2 bg-amber-400"></span>Mid</p>
+                <p><span className="inline-block w-4 h-4 mr-2 ml-2 bg-red-400"></span>Low</p>
             </div>
             <div className="flex flex-row flex-wrap p-2">
                 {SkillsData.map((skill, index) =>
