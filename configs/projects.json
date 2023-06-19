@@ -130,12 +130,18 @@
                 "iconType": "amazon"
             },
             {
-                "url": "https://assistant.google.com/services/a/uid/0000008ecacec0f2?hl=en",
-                "iconType": "googlePlay"
-            },
-            {
                 "url": "https://github.com/priyankark/VoiceClues",
                 "iconType": "github"
+            }
+        ]
+    },
+    {
+        "name": "Tech Up!",
+        "description": "A cross-platform tech news app developed using React Native. The app features a card based UI and is powered by the News API. It allows users to browse through the latest tech news and save articles for later reading.",
+        "link": [
+            {
+                "url": "https://play.google.com/store/apps/details?id=com.techup&hl=en_IN&gl=US",
+                "iconType": "googlePlay"
             }
         ]
     },
