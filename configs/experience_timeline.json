@@ -2,7 +2,7 @@
     {
         "dates": "Mar 2022 - Current",
         "position": "SWE-2",
-        "company": "OPG, E+D, Microsoft IDC",
+        "company": "Office AI, Office Product Group, Microsoft IDC",
         "description": [
             "Working on new initiatives in the Productivity Innovations & Incubation team in the Office AI division.",
             "Rapid prototyping and new product development with various emerging technologies.",
@@ -13,15 +13,20 @@
             "NodeJS",
             "ReactJS",
             "Open AI",
-            "LLM",
+            "Foundational Models",
             "Prompt Engineering",
-            "Python"
+            "Python",
+            "VS Code Extensions",
+            "Applied Machine Learning",
+            "Conversational AI",
+            "Voice Applications",
+            "Chatbots"
         ]
     },
     {
         "dates": "July 2019 - Current",
         "position": "SWE-1",
-        "company": "C+E, C+AI, Microsoft IDC",
+        "company": "Commerce+Ecosystems, Cloud+AI, Microsoft IDC",
         "description": [
             "Worked as a full-stack developer with a front-end concentration in the Azure Commerce+Ecosystems group in Azure Cloud+AI.",
             "Designed and helped develop some of the most critical tools and apps used by Microsoft sellers everyday."
